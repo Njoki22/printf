@@ -1,2 +1,1 @@
-# printf
-Collaboration work for printf
+The printf function
