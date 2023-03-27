@@ -50,7 +50,7 @@ int print_percent(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
 
 /*Functions to print numbers*/
-int print_int(va_list types, char buffer[];
+int print_int(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
 int print_binary(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
@@ -76,7 +76,7 @@ int get_precision(const char *format, int *i, va_list list);
 int get_size(const char *format, int *i);
 
 /*Functions to print string in reverse*/
-int print_reverse(va_list types, cahr buffer[],
+int print_reverse(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
 
 /*Functions to print a string in rot 13*/
@@ -99,7 +99,7 @@ int write_unsgnd(int is_negtaive, int ind,
 /**UTILS**/
 int is_printable(char);
 int append_hexa_code(char, char[], int);
-int is_digit(cahr);
+int is_digit(char);
 
 long int convert_size_number(long int num, int size);
 long int
