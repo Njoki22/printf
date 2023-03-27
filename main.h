@@ -1,33 +1,29 @@
-#ifndef MAIN_H
-#define MAIN_H
-
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef HEADER_H
+#define HEADER_H
 #include <stdarg.h>
-
-
+#include <unistd.h>
+#include <stdlib.h>
 /**
- * struct format - Struct for format
- * @specifiers: Struct format
- * @f: The function associated
+ * struct printf_struct - structure
+ * @p_str: pointer.
+ * @f: variable.
+ *
+ * Description: array.
  */
 
-typedef struct specifiers
+typedef struct printf_struct
 {
-	char specifiers;
-	int (*f)(va_list);
-} specifiers_t;
+	char *p_str;
+	int (*f)(va_list x);
+} strct;
 
-/*prototypes*/
-int _printf(const char *format, ...);
-int get_function(char s, va_list args);
 int _putchar(char c);
-
-/*Conversion specifiers*/
-int print_char(va_list args);
-int print_string(va_list args);
-int print_digit(va_list args);
-int print_mod(va_list args);
-int print_rev_string(va_list args);
-
+int _printf(const char *format, ...);
+int printf_char(va_list list);
+int printf_str(va_list list);
+int printf_porc(va_list list);
+int printf_digit(va_list list);
+int printf_reversed(va_list list);
+int aux(int arg);
+int (*get_function(char c))(va_list a);
 #endif
